@@ -18,10 +18,58 @@ body {
     justify-content: center;
 }
 
+h1 {
+    font-family: 'Raleway'; /* ¿ doublon ? */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+/* H1 et h2 idintique !? */
+
+h2 {
+    font-family: 'Raleway'; 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+h3 {
+    font-family: 'Raleway'; 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+
+
+/***** HEADER *****/
+
 header {
     image-rendering: auto;
 
 }
+
+.logo_booki_header {
+    width: 61.09px;
+    height: 19px;
+    left: 30px;
+    top: 30px;
+}
+
+
+.sous_titre_header {
+    font-style: normal; /* Est-ce nécessaire, où c'est mieux pour visualiser et comprendre le code */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
 
 
 
@@ -31,31 +79,83 @@ header {
 form {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: auto;
+    /* padding: 0; ¿ nécessaire ? */
     font-size: 18px;
     font-weight: 700;
+    height: 50px
 }
 
 .search_icon {
     border-radius: 15px 0px 0px 15px;
-    align-items: center;
     padding: 0.4em;
-    border: 1px solid grey;
+    border: 1px solid #F2F2F2;
+    background-color: #F2F2F2;
+    height: 1.1em;
+    }
+
+.icone_ici {
+    width: 14px;
+    height: 18px;
+    left: 18px;
+    top: 15px;
 }
 
+
+
 input {
-    padding: 0.5em;
-    border: 1px solid grey;
+    border: 1px solid #F2F2F2;
+    font-size: 18px;
+    font-weight: 700;
+    height: 2em; /* Il y a t'il un moyen d'assurer la proportionnalité par rapport à ses voisines ? */
 } 
 
 label {
     background-color: #0065FC;
     border-radius: 0px 15px 15px 0px;
-    align-items: center;
     padding: 0.4em;
     color: white;
 }
 
+
+/***** FILTRE *****/
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:auto;
+    gap: 10px;
+    height: 50px;
+}
+
+.filter_buttons {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    align-items: center;
+    padding: 4px 19px;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
+}
+
+.filter_buttons_blue {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    align-items: center;
+    padding: 4px 19px;
+    background-color: #DEEBFF;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
+}
+
+
+
+
+
+/******************************** OTHERS *************************************/
 
 
 
@@ -69,10 +169,10 @@ label {
     box-sizing: border-box;
 }
 
-.section-title {
+/* .section-title {
     margin: 0;
     font-size: 22px;
-}
+} */
 
 .card {
     background-color: white;
