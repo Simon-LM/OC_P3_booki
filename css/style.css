@@ -13,52 +13,132 @@
     color: var(--main-color);
 }
 
+main {
+    display: flexbox;
+}
+
 body {
+    margin-top: 1em;
     display: flex;
     justify-content: center;
-}
-
-h1 {
-    font-family: 'Raleway'; /* ¿ doublon ? */
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
 }
 
-/* H1 et h2 idintique !? */
+a {
+    color : black;
+    text-decoration-line: none;
+    font-weight: 400;
+}
 
-h2 {
-    font-family: 'Raleway'; 
-    font-style: normal;
-    font-weight: 700;
+aside {
+    width: 32%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between; /* modifier */
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    /* font-weight: 700; */
     font-size: 22px;
     line-height: 26px;
 }
 
 h3 {
-    font-family: 'Raleway'; 
-    font-style: normal;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 18px;
     line-height: 21px;
 }
 
+h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+h5 {
+    /* font-weight: 700; */
+    font-size: 16px;
+    line-height: normal;
+}
+
+p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* 
+Footer/Link
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px; */
+
+
+ul {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    list-style: none;
+    display: inline;
+}
+
+i {
+    vertical-align: middle;
+}
+
+
+article {
+    /* line-height: normal; */
+}
 
 
 
 /***** HEADER *****/
 
 header {
-    image-rendering: auto;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 16px ;
+    justify-content: flex-end;
+    height: 2em;
+}
+
+.menu {
+    /* position: absolute; */
+}
+
+.menu_items {
+    align-items: center;
+    margin: 2em;
+    padding-top: 1em;
+}
+
+.menu_link:hover {
+    color: #0065FC;
+    border-top: 2px solid var(--main-color);
 }
 
 .logo_booki_header {
     width: 61.09px;
     height: 19px;
-    left: 30px;
-    top: 30px;
 }
 
 
@@ -70,9 +150,6 @@ header {
 }
 
 
-
-
-
 /*** Formulaire ***/
 
 
@@ -80,43 +157,68 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
+    vertical-align: middle;
     margin: auto;
-    /* padding: 0; ¿ nécessaire ? */
     font-size: 18px;
     font-weight: 700;
     height: 50px
 }
 
-.search_icon {
-    border-radius: 15px 0px 0px 15px;
-    padding: 0.4em;
-    border: 1px solid #F2F2F2;
-    background-color: #F2F2F2;
-    height: 1.1em;
-    }
-
-.icone_ici {
-    width: 14px;
-    height: 18px;
-    left: 18px;
-    top: 15px;
+label {
+    display: flex;
+    align-items: center;
 }
 
+.search_icon {
+    border-radius: 15px 0px 0px 15px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 1px solid #F2F2F2;
+    background-color: #F2F2F2;
+    /* height: 1.1em; */
+    height: 33px;
+}
 
+.fa-location-dot {
+    width: 14px;
+    height: 18px;
+    color: black;
+}
 
 input {
     border: 1px solid #F2F2F2;
     font-size: 18px;
     font-weight: 700;
-    height: 2em; /* Il y a t'il un moyen d'assurer la proportionnalité par rapport à ses voisines ? */
+    /* height: 3,063em; */
+    height: 49px;
 } 
 
-label {
+/* button {
     background-color: #0065FC;
     border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    height: 49px;
     padding: 0.4em;
     color: white;
+} */
+
+.button_recherche {
+    background-color: #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    /* height: 3,063em; */
+    height: 49px;
+    /* padding: 0.4em; */
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
 }
+
+
 
 
 /***** FILTRE *****/
@@ -125,9 +227,10 @@ label {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin:auto;
+    margin-top: 2em; /* Caution il y aura peut-être besion de supprimer avec le responsiv */
     gap: 10px;
     height: 50px;
+    font-weight: 700;
 }
 
 .filter_buttons {
@@ -135,23 +238,40 @@ label {
     line-height: 20px;
     font-weight: 700;
     align-items: center;
-    padding: 4px 19px;
-    border: 2px solid #F2F2F2;
+    padding: 1em;
+    gap: 10px;
+    border: 3px solid #F2F2F2;
+    background-color: white;
+    color: black;
     border-radius: 25px;
 }
 
-.filter_buttons_blue {
-    font-size: 17px;
-    line-height: 20px;
-    font-weight: 700;
-    align-items: center;
-    padding: 4px 19px;
+.filter_buttons:hover {
     background-color: #DEEBFF;
-    border: 2px solid #F2F2F2;
-    border-radius: 25px;
+}
+
+.filter_buttons i {
+    color:var(--main-color);
+    margin-right: 1em;
+}
+
+.info {
+    font-family: 'Times New Roman';
+    color: var(--main-color);
+    border: 3px solid #F2F2F2;
+    border-radius: 4em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
 }
 
 
+/***** FOOTER *****/
+
+/* footer_links {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+} */
 
 
 
@@ -215,15 +335,97 @@ label {
     width: 65%;
 }
 
+.hebergements_card_order {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+}
+
+.card_hebergement {
+    display: flex;
+    flex-direction: column;
+    width: 250.33px;
+    height: 207.25px;
+    text-align: left;
+    background: #FFFFFF;
+    border: 10em;
+    border-radius: 20px;
+    border-color: #FFFFFF;
+    margin-bottom: 1em;
+}
+
+/* 
+Hôtel du port
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+Nuit à partir de 52€ 
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px; */
+
+.card_hebergement_photo {
+    /* object-fit: fill; */
+    /* text-align: center; */
+    width: 100%;
+    height: 124px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card_hebergement_text {
+    padding-left: 15px;
+    line-height: 0px;
+
+}
+.stars {
+    width: 81px;
+    height: 13.25px;
+}
+
+.fa-star_blue {
+    color: var(--main-color);
+}
+
+.fa-star_grey {
+    color: var(--main-bg-color);
+}
+
+.afficher_plus {
+    padding-top: 2em;
+    line-height: 0px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.fs18_fw700_lh21 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+
 /****** Populaires ***********/
 .populaires {
-    width: 32%;
+    /* width: 32%; */
 }
 
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.populaires-link {
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 
 .populaires-cards .card {
@@ -261,12 +463,61 @@ label {
 }
 
 
+/* Activités à Marseille  */
+
+.activites_card_order {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+}
+
+.card_activites {
+    display: flex;
+    flex-direction: column;
+    width: 297.5px;
+    height: 440px;
+    text-align: left;
+    background: #FFFFFF;
+    /* border: 10em; */
+    border-radius: 20px;
+    border: 2px solid var(--main-bg-color);
+    margin-bottom: 2em;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+
+/* Card/Title
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px; */
+
+.card_activites_photo {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card_activites_text {
+    padding-left: 20px;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
+
+/* De 320 px à 1440 px + marge blanche */
+
+
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+
+/* Large desktop [1440 px + marge blahche] */
+@media (max-width: 1440px) {
+    /* ... */
+}
+
+/* Medium devices (tablets) [ less/equal than 1024px at 1440 px] */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -300,9 +551,13 @@ label {
     }
 }
 
-/* Small devices (phones, less than 768px) */
+/* Small devices (phones)[less than 768px at 320 px] */
 @media (max-width: 767.98px) {
     /* ... */
+
 }
 
-
+/* Too Small devices [less than 320 px]*/
+@media (max-width: 319.98px) {
+    /* ... */
+}
