@@ -36,8 +36,6 @@ body {
 }
 
 
-
-
 main {
     display: flexbox;
 }
@@ -82,12 +80,6 @@ p {
     line-height: 19px;
 }
 
-/* Nuit à partir de 52€
-font-size: 14px;
-line-height: 16px; */
-
-
-
 
 ul {
     font-weight: 400;
@@ -110,10 +102,10 @@ article {
 
 /***** CSS récurants *****/
 
-.wrap {
+/* .wrap {
     display: flex;
     flex-wrap: wrap-reverse;
-}
+} */
 
 
 .fs18_fw700_lh21 {
@@ -168,27 +160,14 @@ nav {
 
 
 .sous_titre_header {
-    font-style: normal; /* Est-ce nécessaire, où c'est mieux pour visualiser et comprendre le code */
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
 }
 
-
-
-
-
-/* .formulaire_et_filtre div form {
-    display: flex;
-
-    justify-content: left;
-} */
-
-
 .formulaire{
     width: 40%;
 }
-
 
 
 
@@ -397,28 +376,8 @@ footer {
 }
 
 .footer_table {
-    /* width: 33%; */
     width: calc(100% / 3);
 }
-
-
-
-/* footer_links {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-} */
-
-
-/* 
-Footer/Link
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px; */
-
-
 
 
 /******************************** OTHERS *************************************/
@@ -443,7 +402,8 @@ line-height: 19px; */
 }
 
 .card img {
-    object-fit: cover;
+    /* object-fit: cover; */
+    
 }
 
 .card-title {
@@ -490,59 +450,69 @@ line-height: 19px; */
     padding-bottom: 1em;
 }
 
-
 .hebergements_card_order {
     display: flex;
     flex-wrap: wrap ;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 0 1em;
 }
 
-.card_hebergement {
-    display: flex;
-    flex-direction: column;
-    width: 250.33px;
+.hebergements_card_order article {
+    flex: auto;
+    max-width: calc((100% / 2) - 1em);
+    min-width: calc((100% / 3) - 1.5em);
+       
     height: 207.25px;
     text-align: left;
     background: #FFFFFF;
     border: 10em;
     border-radius: 20px;
     border-color: #FFFFFF;
-    margin-bottom: 1em;
+    margin-bottom: 1em;   
 }
 
-/* H5 ou H4 ?
-Hôtel du port
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px; */
+.hebergements_card_order article a {
+    /* min-width: calc((100% / 3) - 1em); */
+    /* width: max-content; */
+    /* width: 10em; */
+    /* width: 200%; */
+}
+
+/* width: intrinsic;             Safari/WebKit utilisent un nom non-standard
+width: -moz-max-content;      Firefox/Gecko
+width: -webkit-max-content;   Chrome */
+
+.hebergements div article a img {
+    --mini_img_card_heb: 25vb;
+
+    object-fit: cover;
+    width: 100%;
+    min-width: var(--mini_img_card_heb);
+}
 
 
 .card_hebergement_photo {
     /* object-fit: fill; */
-    /* text-align: center; */
-    width: 100%;
+    text-align: center;
+    /* width: 100%; */
     height: 124px;
+    /* height: 40%; */
     border-radius: 20px 20px 0px 0px;
+    /* box-sizing: border-box; */
 }
 
 .card_hebergement_text {
-    /* font-size: 14px; */
-    /* line-height: 16px; */
     padding-left: 15px;
-    /* line-height: 0px; */
 }
 
 
-.hebergements_card_order .card-title{
-    /* margin: 0em; */
+.hebergements_card_order div .card-title{
     margin-top: 0.5em;
     margin-bottom: 0.3em;
 }
 
 
-.hebergements_card_order .card-subtitle{
+.hebergements_card_order div .card-subtitle{
     margin-right: 0em;
     margin-left: 0em;
     margin-top: 0em;
@@ -554,9 +524,11 @@ line-height: 19px; */
     margin: 0em;
 } */
 
-.stars {
-    width: 81px;
-    height: 13.25px;
+.stars i {
+    /* width: 81px; */
+    /* height: 13.25px; */
+    width: 0,5em;
+    height: 0,1em;
 }
 
 .fa-star_blue {
@@ -618,6 +590,11 @@ line-height: 19px; */
     box-sizing: border-box;
 }
 
+.populaires-cards article a img {
+    object-fit: cover;
+}
+
+
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
@@ -638,12 +615,14 @@ line-height: 19px; */
     display: flex;
     flex-wrap: wrap ;
     justify-content: space-between;
+    width: 100%;
 }
 
 .card_activites {
     display: flex;
     flex-direction: column;
-    width: 297.5px;
+    /* width: 297.5px; */
+    width: calc((100% / 4) - 1em );
     height: 440px;
     text-align: left;
     background: #FFFFFF;
