@@ -807,8 +807,7 @@ footer nav li {
         border: 0.6vmin solid var(--main-bg-color);
         border-radius: 7vmin;
         padding-left: 2vmin;
-        height: 13vmin;     
-        min-width: none;
+        height: 13vmin;   
         width: calc(50% - 2vmin );  
         max-width: none; 
         gap: 2vmin;
