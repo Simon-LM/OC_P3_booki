@@ -1,7 +1,8 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    /* font-size: 1rem; */
+    font-size: 1rem;
+    line-height: 1.2em;
 }
 
 :root {
@@ -21,18 +22,18 @@ a {
 
 h1, h2 {
     font-size: 22px;
-    line-height: 1.2em;
+    /* line-height: 1.2em; */
 }
 
 h3 {
     font-size: 16px;
-    line-height: 1.2em;
+    /* line-height: 1.2em; */
 }
 
 p {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.2em;
+    /* line-height: 1.2em; */
 }
 
 ul {
@@ -41,7 +42,7 @@ ul {
 }
 
 li {
-    line-height: 1.2em;
+    /* line-height: 1.2em; */
     list-style: none;
     padding: 0;
 }
@@ -327,7 +328,6 @@ article {
 }
 
 .hebergements-and-populaires .section_title {
-    line-height: 0;
     margin-bottom: 2em;
 } 
 
@@ -415,7 +415,7 @@ article {
 
 .show_more {
     font-size: 18px;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 0;
 }
 
@@ -434,6 +434,7 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5em; /* -0.5em compared to .section_title */
 }
 
 .populaires .order {
@@ -661,7 +662,6 @@ footer nav li {
     h1, h2 {
         font-size: 1.375rem; /* for old brothers */
         font-size: clamp(1.375rem, 5.9vw, 5.9vmin);
-        
     }
 
     h3 {
