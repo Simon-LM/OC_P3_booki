@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    /* font-size: 1rem; */
 }
 
 :root {
@@ -20,15 +21,18 @@ a {
 
 h1, h2 {
     font-size: 22px;
+    line-height: 1.2em;
 }
 
 h3 {
     font-size: 16px;
+    line-height: 1.2em;
 }
 
 p {
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.2em;
 }
 
 ul {
@@ -37,6 +41,7 @@ ul {
 }
 
 li {
+    line-height: 1.2em;
     list-style: none;
     padding: 0;
 }
@@ -384,12 +389,12 @@ article {
 }
 
 .hebergements article {
-   width: calc((100% / 3) - 2em);
+   /* width: calc((100% / 3) - 2em); */
 
     /* OPTION */
-    /* max-width: calc((100% / 2) - 0.5em);
+    max-width: calc((100% / 2) - 0.5em);
     width: calc(12em + 1vw);
-    min-width: calc((100% / 3) - 2em); */
+    min-width: calc((100% / 3) - 2em);
 }
 
 .hebergements a {
@@ -648,16 +653,25 @@ footer nav li {
 
     /*** GÉNÉRAL [SMALL] ***/
 
+    *{
+        font-size: 1rem; /* for old brothers */
+        font-size: clamp(1rem, 4.3vw , 4.3vmin);
+    }
+
     h1, h2 {
-        font-size: 5.9vmin;
+        font-size: 1.375rem; /* for old brothers */
+        font-size: clamp(1.375rem, 5.9vw, 5.9vmin);
+        
     }
 
     h3 {
-        font-size: 4.7vmin;
+        font-size: 1rem; /* for old brothers */
+        font-size: clamp(1rem, 4.7vw, 4.7vmin);
     }
 
     p {
-        font-size: 4.3vmin;
+        font-size: 4.3vmin; /* for old brothers */
+        font-size: clamp(1rem, 4.3vw, 4.3vmin);
     }
 
     .main-container {
@@ -687,7 +701,8 @@ footer nav li {
     }
 
     header nav ul li {
-        font-size: 4.2vmin ;
+        font-size: 1rem;  /* for old brothers */
+        font-size: clamp(1rem, 4.2vw, 4.2vmin);
         text-align: center;
         width: 50vw;
     }
@@ -724,8 +739,8 @@ footer nav li {
     }
 
     .formulaire_et_filtre .subtitle {
-        font-size: 4.2vmin;
-        line-height: 3vmin;
+        font-size: 1rem;  /* for old brothers */
+        font-size: clamp(1rem, 4.2vw, 4.2vmin);
         margin-bottom: 10vmin;
     }
     
@@ -739,7 +754,8 @@ footer nav li {
         border: 0.5vmin solid var(--main-bg-color);
         border-top-left-radius: 4vmin;
         border-bottom-left-radius: 4vmin;
-        font-size: 4.8vmin;
+        font-size: 1.125rem;  /* for old brothers */
+        font-size: clamp(1.125rem, 4.8vw, 4.8vmin);
         padding: 0 4.5vmin;
     }
  
@@ -751,7 +767,8 @@ footer nav li {
     .formulaire input {
         flex: auto;
         border: 0.5vmin solid var(--main-bg-color);
-        font-size: 4.8vmin;
+        font-size: 1.125rem;  /* for old brothers */
+        font-size: clamp(1.125rem, 4.8vw, 4.8vmin);
         font-weight: 700;
         height: 100%;
         padding-left: 4vmin;   
@@ -764,9 +781,9 @@ footer nav li {
 
     form button {
         border: 0.5vmin solid var(--main-bg-color);
-        font-size: 4.8vmin;
         border-radius: 4vmin;
-        font-size: 4.5vmin;
+        font-size: 1.125rem;  /* for old brothers */
+        font-size: clamp(1.12rem, 4.8vw, 4.8vmin);
         margin: 0;
         margin-left: -8vmin;
         padding: 0 4vmin;
@@ -802,7 +819,8 @@ footer nav li {
     }
 
     .filter button {
-        font-size: 3.8vmin;
+        font-size: 0.9rem;  /* for old brothers */
+        font-size: clamp(0.9rem, 3.8vw, 3.8vmin);
         justify-content: center ;
         border: 0.6vmin solid var(--main-bg-color);
         border-radius: 7vmin;
@@ -810,12 +828,13 @@ footer nav li {
         height: 13vmin;   
         width: calc(50% - 2vmin );  
         max-width: none; 
-        gap: 2vmin;
+        gap: clamp(10px, 2vw, 2vmin);
     }
 
     .filter-buttons i {
         color:var(--main-color);
-        font-size: 6vmin;
+        font-size: 1rem;  /* for old brothers */
+        font-size: clamp(1rem, 6vw, 6vmin);
         margin-right: 0.8vmin;
     }
 
@@ -826,7 +845,8 @@ footer nav li {
 
     .info .icon {
         font-family: 'Times New Roman';
-        font-size: 4.2vmin;
+        font-size: 1rem; /* for old brothers */
+        font-size: clamp(1em, 4.2vw, 4.2vmin);
         font-weight: 400;
         color: var(--main-color);
         border: 0.5vmin solid var(--main-bg-color);
@@ -871,7 +891,7 @@ footer nav li {
     }
 
     .hebergements-and-populaires .section_title {
-        line-height: 0vmin;
+        line-height: 1.2em;
         margin-bottom: 8vmin;
     } 
 
@@ -882,13 +902,14 @@ footer nav li {
     
 
     .hebergements-and-populaires .card-title {
-        font-size: 4.3vmin;
-        line-height: 5vmin;
+        font-size: 1rem;  /* for old brothers */
+        font-size: clamp(1rem, 4.3vw, 4.3vmin);
         margin: 2vmin 0;
     }
 
     .hebergements-and-populaires .card-subtitle {
-        font-size: 3.8vmin;
+        font-size: 0.9rem;  /* for old brothers */
+        font-size: clamp(0.9rem, 3.8vw, 3.8vmin);
         line-height: 5vmin;
     }
 
@@ -911,15 +932,16 @@ footer nav li {
     }
     
     .hebergements .stars {
-        font-size: 3.5vmin;
-        line-height: 2vmin;
+        font-size: 0.9rem;  /* for old brothers */
+        font-size: clamp(0.9rem, 3.5vw, 3.5vmin);
         margin-top: 2vmin;
         margin-bottom: 2vmin;
     }
    
     .show_more {
+        font-size: 1.125rem;  /* for old brothers */
+        font-size: clamp(1.125rem, 4.7vw, 4.7vmin);
         margin: 4vmin 0;
-        font-size: 4.7vw;
     }
  
         
@@ -935,7 +957,8 @@ footer nav li {
     }
 
     .fa-chart-line {
-        font-size: 4.5vmin;
+        font-size: 1.1rem;  /* for old brothers */
+        font-size: clamp(1.1rem, 4.5vw, 4.5vmin);
     }
 
     .populaires .order {
@@ -960,13 +983,13 @@ footer nav li {
 
     .populaires-cards .card-rating {
         display: flex;
-        line-height: 0;
         gap: 1vmin;
     }
 
     .fa-xs {
-        font-size: 3.2vmin;
-        line-height: 5vmin;
+        font-size: 0.8rem; /* for old brothers */
+        font-size: clamp(0.8rem, 3.2vw, 3.2vmin);
+        line-height: calc(1em + 3vmin);
     }
 
 
@@ -1021,6 +1044,7 @@ footer nav li {
     }
 
     footer nav li {
-        font-size: 4.3vmin;
+        font-size: 1.1rem; /* for old brothers */
+        font-size: clamp(1.1rem, 4.3vw, 4.3vmin);
     }
 }
